@@ -1,6 +1,20 @@
  const btncon=document.querySelector(".btn-container");
  btncon.addEventListener("click",call);
 document.addEventListener("keydown",play);
+function call(event){ 
+   const target=event.target;
+   if(target.classList.contains("btn")){
+     let key=target.getAttribute("data-key");
+     const audio = document.querySelector(`audio[data-key="${key}"]`);
+      audio.currentTime = 0;//rewind time to 0
+      audio.play();
+      target.classList.add("playing");
+      target.addEventListener("transitionend",()=>{
+      target.classList.remove("playing");
+  });
+  // const key = document.querySelector(`.btn[data-key="${}"]`);
+     
+   }
 function play(Event){
   const audio= document.querySelector(`audio[data-key="${Event.keyCode}"]`);
   const key = document.querySelector(`.btn[data-key="${Event.keyCode}"]`);
@@ -21,18 +35,5 @@ function removeTrans(e){
 }
 const keys = document.querySelectorAll(".btn");
 keys.forEach(key=>key.addEventListener("transitionend",removeTrans));
-function call(event){ 
-   const target=event.target;
-   if(target.classList.contains("btn")){
-     let key=target.getAttribute("data-key");
-     const audio = document.querySelector(`audio[data-key="${key}"]`);
-      audio.currentTime = 0;//rewind time to 0
-      audio.play();
-      target.classList.add("playing");
-      target.addEventListener("transitionend",()=>{
-      target.classList.remove("playing");
-  });
-  // const key = document.querySelector(`.btn[data-key="${}"]`);
-     
-   }
+
 }
