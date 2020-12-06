@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Drum Kit</title>
+ <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ <div class="btn-container">
+    <button class="btn" data-key="65" type="button"><kbd>A</kbd>
+     <span class="name">Clap</span>
+    </button>
+    <button class="btn" data-key="83" type="button"><kbd>S</kbd>
+     <span class="name">Hithat</span>
+    </button>
+    <button class="btn" data-key="68" type="button"><kbd>D</kbd>
+     <span class="name">Kick</span>
+    </button>
+    <button class="btn" data-key="70" type="button"><kbd>F</kbd>
+     <span class="name">Openhat</span>
+    </button>
+    <button class="btn" data-key="71" type="button"><kbd>G</kbd>
+     <span class="name">Boom</span>
+    </button>
+    <button class="btn" data-key="72" type="button"><kbd>H</kbd>
+     <span class="name">Ride</span>
+    </button>
+    <button class="btn" data-key="74" type="button"><kbd>J</kbd>
+     <span class="name">Snare</span>
+    </button>
+    <button class="btn" data-key="75" type="button"><kbd>K</kbd>
+     <span class="name">Tom</span>
+    </button>
+    <button class="btn" data-key="76" type="button"><kbd>L</kbd>
+     <span class="name">Tink</span>
+    </button>
+ </div>
+ <div class="sound">
+  <audio data-key="65" src="./sounds/clap.wav"></audio>
+  <audio data-key="83" src="./sounds/hihat.wav"></audio>
+  <audio data-key="68" src="./sounds/kick.wav"></audio>
+  <audio data-key="70" src="./sounds/openhat.wav"></audio>
+  <audio data-key="71" src="./sounds/boom.wav"></audio>
+  <audio data-key="72" src="./sounds/ride.wav"></audio>
+  <audio data-key="74" src="./sounds/snare.wav"></audio>
+  <audio data-key="75" src="./sounds/tom.wav"></audio>
+  <audio data-key="76" src="./sounds/tink.wav"></audio>
+ </div>
+ <script src="app.js"></script>
+</body>
+</html>

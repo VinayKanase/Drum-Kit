@@ -1,0 +1,65 @@
+*{
+ margin: 0;
+ padding: 0;box-sizing: border-box;
+}
+html{
+ background: url("https://i.imgur.com/b9r5sEL.jpg") bottom center no-repeat;
+ background-size: cover;
+ height: 100vh;
+}
+.btn-container{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ position: relative;
+ top: 46vh;
+ left: 0px;
+}
+.btn{
+ font-size: 22px;
+ font-weight: bold;
+ flex: 1;
+ margin: 8px;
+ height: 100px;
+ width: 100px;
+ /* padding: 20px 0px; */
+ color: white;
+ background: rgba(0, 0, 0, 0.45);
+ border: 4px solid black;
+ border-radius: 10px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ outline: none;
+ transition: all 0.1s;
+}
+kbd,
+.name{
+ pointer-events: none;
+}
+.name{
+ color: rgb(55, 182, 55);
+ font-size: 18px;
+ font-weight: 500;
+}
+.playing{
+ border: 2px solid gold;
+ box-shadow:   2px 2px 3px gold ,
+ -2px 2px 3px gold,
+ 2px -2px 3px gold,
+ -2px -2px 3px gold,
+ inset -2px -2px 3px gold,
+ inset 2px -2px 3px gold,
+ inset -2px 2px 3px gold,
+ inset 2px 2px 3px gold;
+ transform: scale(1.1);
+}
+/* @media screen and (max-width:903px){
+ .btn-container{
+  display: flexbox;
+ }
+ .btn{
+  
+ }
+} */
